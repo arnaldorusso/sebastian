@@ -95,6 +95,28 @@ def major_scale(tonic):
 def minor_scale(tonic):
     return [tonic + i for i in [0, 2, -3, -1, 1, -4, -2]]
 
+def pentatonic_scale(tonic):
+    '''
+    Pentatonic scale, based on Major Pentatonic.
+    Not implemented on Sebastian.
+
+    References
+    ----------
+    http://en.wikipedia.org/wiki/Pentatonic_scale
+    '''
+    return [tonic + i for i in [0, 2, 4, 1, 3]]
+
+def blues_scale(tonic):
+    '''
+    Blues scale
+
+    References
+    ----------
+    http://en.wikipedia.org/wiki/Blues_scale
+    '''
+    return [tonic + i for i in [0, 2, 4, -1, 1, 3, 5]]
+
+
 
 class Key(object):
     def __init__(self, tonic, scale):
